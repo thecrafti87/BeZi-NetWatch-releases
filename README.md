@@ -1,0 +1,137 @@
+# NetWatch
+
+**Netzwerküberwachung für Live-Events.**
+
+NetWatch läuft auf einem Laptop im Veranstaltungsnetz und zeigt jederzeit,
+ob die Technik erreichbar ist — und wo es klemmt, wenn nicht. Es gibt zwei
+Ansichten: eine für Kundschaft und Helfende, die nur Ampelfarben und
+Klartext zeigt, und eine für die Technik mit allen Rohdaten.
+
+Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
+Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
+während der Stream läuft.
+
+Aktuelle Fassung: **1.1.0**
+
+> Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
+
+---
+
+## Was es kann
+
+**Überwachung**
+- Erreichbarkeit, Latenz, Jitter und Paketverlust je Gerät
+- Ampelstatus in Grün, Gelb und Rot mit einstellbaren Schwellen
+- Sofortige Aktualisierung ohne Neuladen der Seite
+- Ton- und Browser-Benachrichtigung, wenn ein Gerät ausfällt
+- Abhängigkeiten zwischen Geräten: fällt der Switch aus, wird nicht alles
+  dahinter als Einzelstörung gemeldet
+- Protokoll aller Statusänderungen mit Zeitstempel für die Nachbereitung
+
+**Fehlersuche**
+- **Engpass-Analyse** — findet die langsamste Stelle im Weg zu einem Gerät.
+  Ein einzelner 100-Mbit-Port bremst die ganze Verbindung aus und fällt
+  sonst nur als „das Internet ist langsam" auf. Verbraucht praktisch keine
+  Bandbreite und ist im laufenden Betrieb unbedenklich.
+- **Routenverfolgung** mit Latenz und Paketverlust je Zwischenstation
+- **Internet-Geschwindigkeitstest** für Download, Upload und Ping
+- **Bandbreitenanzeige** je Netzwerkschnittstelle in Echtzeit
+- **Netzwerk-Suchlauf** findet Geräte im Netz und erkennt ihren Typ
+
+**Veranstaltungstechnik**
+- Switches über SNMP: Portstatus und **tatsächliche Auslastung je Port**
+- ArtNet und sACN: aktive DMX-Universen und deren Sender
+- Dante und NDI: Geräte- und Quellenerkennung
+- PTP: Grandmaster und Synchronisierung
+- Port- und Dienstprüfungen für HTTP, HTTPS, RTMP, SRT, RTSP und NDI
+
+**Handhabung**
+- Event-Profile: Gerätelisten je Veranstaltungsort speichern und laden
+- Heller und dunkler Anzeigemodus
+- Läuft im Browser, also auch auf Tablet und Telefon im selben Netz
+
+---
+
+## Installation
+
+1. Die ZIP-Datei unten unter *Assets* herunterladen.
+2. In einen Ordner eigener Wahl entpacken, etwa `C:\NetWatch`.
+3. `NetWatch.exe` starten.
+4. Der Browser öffnet sich auf `http://localhost:5000`.
+
+Im selben Netz erreichen andere Geräte die Ansichten über die IP-Adresse
+des Laptops, also etwa `http://192.168.1.50:5000` für die Kundenansicht und
+`http://192.168.1.50:5000/tech` für die Technik.
+
+### Hinweis zu SmartScreen
+
+Beim ersten Start meldet Windows möglicherweise „Der Computer wurde durch
+Windows geschützt". Das liegt daran, dass das Programm nicht mit einem
+kostenpflichtigen Zertifikat signiert ist, und ist kein Hinweis auf
+Schadsoftware. Über *Weitere Informationen* und *Trotzdem ausführen* lässt
+sich der Start fortsetzen.
+
+### Voraussetzungen
+
+- Windows 10 oder 11, 64 Bit
+- Rund 250 MB Platz auf der Festplatte
+- Keine Administratorrechte nötig
+- Keine Installation von Python erforderlich
+
+---
+
+## Aktualisierung
+
+NetWatch sieht beim Start im Hintergrund nach, ob eine neuere Fassung
+vorliegt. Ist das der Fall, erscheint in der Techniker-Ansicht ein Hinweis
+mit der Möglichkeit, sie zu laden und einzuspielen. Für die Installation
+startet NetWatch einmal neu und fragt vorher nach — mitten in einer
+Veranstaltung soll nichts unangekündigt stoppen.
+
+**Ihre Daten bleiben erhalten.** Konfiguration, Event-Profile und
+Protokolle werden bei einer Aktualisierung nicht angefasst.
+
+### Datenschutz
+
+Nach außen geht ausschließlich die Frage, welche Fassung die neueste ist.
+Diese Abfrage geht an GitHub und überträgt keine Angaben über Sie, Ihr Netz
+oder Ihre Geräte. NetWatch sendet keine Nutzungsdaten, keine Messwerte und
+keine Gerätelisten. Alles, was NetWatch misst, bleibt auf Ihrem Rechner.
+
+Wer die Abfrage nicht möchte, kann den Rechner ohne Internetzugang
+betreiben — NetWatch arbeitet vollständig weiter und meldet den
+fehlgeschlagenen Abruf nicht als Fehler.
+
+---
+
+## Erwerb und Nutzung
+
+NetWatch lässt sich 14 Tage lang vollständig testen. Danach ist eine Lizenz
+erforderlich.
+
+Anfragen an **BeZi-Film — Benjamin Ziemann**.
+
+Die Software wird ohne Gewähr bereitgestellt. Sie ist ein Hilfsmittel zur
+Überwachung und ersetzt weder eine fachgerechte Netzplanung noch die
+Kontrolle durch die verantwortliche Technik.
+
+Die mitgelieferten Fremdkomponenten und ihre Lizenzen sind in
+`THIRD-PARTY-LICENSES.md` im Programmordner aufgeführt.
+
+---
+
+## Was noch fehlt
+
+Ehrlichkeitshalber, damit niemand vergeblich sucht:
+
+- **Keine Bandbreite je Gerät.** NetWatch kann nicht sagen, welches Gerät
+  gerade wie viel Datenverkehr erzeugt. Dafür wäre eine Auswertung am
+  Router oder ein gespiegelter Switch-Port nötig. Die Port-Auslastung über
+  SNMP kommt dem am nächsten und zeigt, welche Strecke dichtmacht.
+- **Kein Windows-Installer.** Die Auslieferung erfolgt als ZIP zum
+  Entpacken.
+- **Keine Signatur.** Daher die SmartScreen-Meldung oben.
+- **Nur Windows.** Der Code läuft grundsätzlich auch anderswo, es gibt aber
+  keine fertigen Pakete für macOS oder Linux.
+- **Keine Benachrichtigung nach außen.** Weiterleitung von Störungen per
+  E-Mail, Telegram oder Webhook ist geplant, aber noch nicht enthalten.
