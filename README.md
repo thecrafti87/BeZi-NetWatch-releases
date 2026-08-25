@@ -11,7 +11,7 @@ Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
 Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
 während der Stream läuft.
 
-Aktuelle Fassung: **1.4.0**
+Aktuelle Fassung: **1.5.0**
 
 > Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
 
@@ -52,6 +52,13 @@ Aktuelle Fassung: **1.4.0**
 - Dante und NDI: Geräte- und Quellenerkennung
 - PTP: Grandmaster und Synchronisierung
 - Port- und Dienstprüfungen für HTTP, HTTPS, RTMP, SRT, RTSP und NDI
+
+**Zugangsschutz**
+- Die Techniker-Ansicht lässt sich mit einer PIN sichern — wichtig in
+  fremden Veranstaltungsnetzen, wo jeder im WLAN auch den Laptop erreicht
+- Die Kundenansicht bleibt ohne Anmeldung offen, zeigt dann aber nur
+  Ampelfarben und Klartext: keine Adressen, keine Netzstruktur
+- Die PIN wird nur als Prüfsumme gespeichert und landet nicht in Profilen
 
 **Handhabung**
 - Event-Profile: Gerätelisten je Veranstaltungsort speichern und laden
