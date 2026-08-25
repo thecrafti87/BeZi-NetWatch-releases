@@ -11,7 +11,7 @@ Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
 Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
 während der Stream läuft.
 
-Aktuelle Fassung: **1.5.0**
+Aktuelle Fassung: **1.6.0**
 
 > Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
 
@@ -59,6 +59,8 @@ Aktuelle Fassung: **1.5.0**
 - Die Kundenansicht bleibt ohne Anmeldung offen, zeigt dann aber nur
   Ampelfarben und Klartext: keine Adressen, keine Netzstruktur
 - Die PIN wird nur als Prüfsumme gespeichert und landet nicht in Profilen
+- Auf Wunsch läuft die Techniker-Ansicht verschlüsselt über HTTPS, während
+  die Kundenansicht ohne Zertifikatswarnung erreichbar bleibt
 
 **Handhabung**
 - Event-Profile: Gerätelisten je Veranstaltungsort speichern und laden
