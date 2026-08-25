@@ -11,7 +11,7 @@ Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
 Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
 während der Stream läuft.
 
-Aktuelle Fassung: **1.3.0**
+Aktuelle Fassung: **1.4.0**
 
 > Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
 
@@ -55,6 +55,8 @@ Aktuelle Fassung: **1.3.0**
 
 **Handhabung**
 - Event-Profile: Gerätelisten je Veranstaltungsort speichern und laden
+- Mehrere Geräte auf einmal auswählen und entfernen — praktisch, wenn nach
+  einem Ortswechsel die alte Geräteliste im Weg steht
 - Heller und dunkler Anzeigemodus
 - Läuft im Browser, also auch auf Tablet und Telefon im selben Netz
 
