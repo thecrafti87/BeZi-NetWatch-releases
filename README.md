@@ -11,7 +11,7 @@ Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
 Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
 während der Stream läuft.
 
-Aktuelle Fassung: **1.2.0**
+Aktuelle Fassung: **1.3.0**
 
 > Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
 
@@ -39,7 +39,8 @@ Aktuelle Fassung: **1.2.0**
 - **Netzwerk-Suchlauf** findet Geräte im Netz und erkennt ihren Typ
 
 **Benachrichtigung nach außen**
-- **Telegram** und **Webhook** (Slack, Discord, Microsoft Teams oder
+- **Telegram**, **E-Mail** (eigener SMTP-Server) und **Webhook**
+  (Slack, Discord, Microsoft Teams oder
   allgemeines JSON) melden Störungen dorthin, wo Sie ohnehin hinschauen
 - Gemeldet wird erst, wenn eine Störung eine einstellbare Zeit anhält —
   kurze Aussetzer lösen nichts aus, damit die Meldungen ernst genommen werden
@@ -140,5 +141,5 @@ Ehrlichkeitshalber, damit niemand vergeblich sucht:
 - **Keine Signatur.** Daher die SmartScreen-Meldung oben.
 - **Nur Windows.** Der Code läuft grundsätzlich auch anderswo, es gibt aber
   keine fertigen Pakete für macOS oder Linux.
-- **Kein E-Mail-Versand.** Telegram und Webhook sind enthalten, SMTP noch
-  nicht.
+- **Keine Weiterleitung per SMS.** E-Mail, Telegram und Webhook sind
+  enthalten.
