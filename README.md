@@ -11,7 +11,7 @@ Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
 Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
 während der Stream läuft.
 
-Aktuelle Fassung: **1.9.0**
+Aktuelle Fassung: **1.10.0**
 
 > Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
 
@@ -30,6 +30,12 @@ Aktuelle Fassung: **1.9.0**
 - Abhängigkeiten zwischen Geräten: fällt der Switch aus, wird nicht alles
   dahinter als Einzelstörung gemeldet
 - Protokoll aller Statusänderungen mit Zeitstempel für die Nachbereitung
+
+**Vor der Veranstaltung**
+- **Startprüfung:** Ein Knopf prüft in einem Durchgang Erreichbarkeit,
+  Leitungsgeschwindigkeit zum Router, Upload, Dienste, Switch-Auslastung,
+  ob Alarme tatsächlich ankommen und ob die Technik-Ansicht geschützt ist —
+  mit klarem Urteil und einem Hinweis, was zu tun ist
 
 **Fehlersuche**
 - **Engpass-Analyse** — findet die langsamste Stelle im Weg zu einem Gerät.
