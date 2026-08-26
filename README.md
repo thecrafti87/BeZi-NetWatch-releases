@@ -11,7 +11,7 @@ Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
 Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
 während der Stream läuft.
 
-Aktuelle Fassung: **1.8.0**
+Aktuelle Fassung: **1.9.0**
 
 > Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
 
@@ -21,7 +21,10 @@ Aktuelle Fassung: **1.8.0**
 
 **Überwachung**
 - Erreichbarkeit, Latenz, Jitter und Paketverlust je Gerät
-- Ampelstatus in Grün, Gelb und Rot mit einstellbaren Schwellen
+- Ampelstatus in Grün, Gelb und Rot mit einstellbaren Schwellen —
+  wahlweise global oder je Gerät, denn eine WLAN-Kamera darf langsamer
+  sein als der Encoder
+- Prüfabstand je Gerät: Nebensächliches muss nicht im selben Takt laufen
 - Sofortige Aktualisierung ohne Neuladen der Seite
 - Ton- und Browser-Benachrichtigung, wenn ein Gerät ausfällt
 - Abhängigkeiten zwischen Geräten: fällt der Switch aus, wird nicht alles
@@ -50,6 +53,11 @@ Aktuelle Fassung: **1.8.0**
 - **Telegram**, **E-Mail** (eigener SMTP-Server) und **Webhook**
   (Slack, Discord, Microsoft Teams oder
   allgemeines JSON) melden Störungen dorthin, wo Sie ohnehin hinschauen
+- **Lebenszeichen:** NetWatch meldet in Abständen, dass es noch läuft.
+  Bleibt die Meldung aus, weiß man, dass die Überwachung selbst steht —
+  sonst zeigt jede offene Seite weiter den letzten Stand
+- **Quittieren:** Ein bekanntes Problem lässt sich für eine Weile stumm
+  schalten, ohne die Überwachung abzuschalten
 - Gemeldet wird erst, wenn eine Störung eine einstellbare Zeit anhält —
   kurze Aussetzer lösen nichts aus, damit die Meldungen ernst genommen werden
 - Sperrzeit gegen wiederholte Meldungen, auf Wunsch Entwarnung bei Erholung
