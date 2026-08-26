@@ -11,7 +11,7 @@ Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
 Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
 während der Stream läuft.
 
-Aktuelle Fassung: **1.7.0**
+Aktuelle Fassung: **1.8.0**
 
 > Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
 
@@ -71,6 +71,9 @@ Aktuelle Fassung: **1.7.0**
   die Kundenansicht ohne Zertifikatswarnung erreichbar bleibt
 
 **Handhabung**
+- **Gerätegruppen** wie „Bühne", „Regie" oder „Publikum-WLAN": Die
+  Kundenansicht zeigt je Gruppe eine eigene Ampel, Störungen stehen oben.
+  In der Technik lässt sich die Geräteliste nach Gruppe filtern
 - Event-Profile: Gerätelisten je Veranstaltungsort speichern und laden
 - Mehrere Geräte auf einmal auswählen und entfernen — praktisch, wenn nach
   einem Ortswechsel die alte Geräteliste im Weg steht
