@@ -11,7 +11,7 @@ Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
 Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
 während der Stream läuft.
 
-Aktuelle Fassung: **1.6.0**
+Aktuelle Fassung: **1.7.0**
 
 > Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
 
@@ -37,6 +37,14 @@ Aktuelle Fassung: **1.6.0**
 - **Internet-Geschwindigkeitstest** für Download, Upload und Ping
 - **Bandbreitenanzeige** je Netzwerkschnittstelle in Echtzeit
 - **Netzwerk-Suchlauf** findet Geräte im Netz und erkennt ihren Typ
+
+**Nachbereitung**
+- **Verlauf** zeigt für jedes Gerät als Zeitbalken, wann es erreichbar war
+  und wann nicht — zoombar bis auf die Sekunde
+- **Bericht zum Herunterladen** in Klartext, direkt an Auftraggeber
+  weiterzugeben: Verfügbarkeit je Gerät, Unterbrechungen mit Dauer. Kurze
+  Aussetzer werden getrennt ausgewiesen, damit ein gesundes Netz nicht wie
+  ein kaputtes aussieht
 
 **Benachrichtigung nach außen**
 - **Telegram**, **E-Mail** (eigener SMTP-Server) und **Webhook**
