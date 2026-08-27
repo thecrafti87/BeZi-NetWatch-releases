@@ -11,7 +11,7 @@ Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
 Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
 während der Stream läuft.
 
-Aktuelle Fassung: **1.13.1**
+Aktuelle Fassung: **1.14.0**
 
 > Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
 
@@ -107,16 +107,22 @@ Aktuelle Fassung: **1.13.1**
 
 ## Installation
 
-1. Die ZIP-Datei unten unter *Assets* herunterladen.
-2. In einen Ordner eigener Wahl entpacken, etwa `C:\NetWatch`.
-3. `NetWatch.exe` starten.
-4. Der Browser öffnet sich auf `http://localhost:5000`.
+### Windows
+
+1. `NetWatch-Setup-1.14.0.exe` unten unter *Assets* herunterladen.
+2. Ausführen. Die Installation läuft **ohne Administratorrechte** in den
+   eigenen Benutzerordner und legt einen Startmenü-Eintrag an.
+3. NetWatch starten. Der Browser öffnet sich auf `http://localhost:5000`.
 
 Im selben Netz erreichen andere Geräte die Ansichten über die IP-Adresse
 des Laptops, also etwa `http://192.168.1.50:5000` für die Kundenansicht und
 `http://192.168.1.50:5000/tech` für die Technik.
 
-### Hinweis zu SmartScreen
+> Die ZIP-Datei liegt weiterhin bei — für alle, die lieber ohne
+> Installation arbeiten oder von einer bestehenden Fassung aktualisieren.
+> Entpacken und `NetWatch.exe` starten.
+
+#### Hinweis zu SmartScreen
 
 Beim ersten Start meldet Windows möglicherweise „Der Computer wurde durch
 Windows geschützt". Das liegt daran, dass das Programm nicht mit einem
@@ -124,12 +130,38 @@ kostenpflichtigen Zertifikat signiert ist, und ist kein Hinweis auf
 Schadsoftware. Über *Weitere Informationen* und *Trotzdem ausführen* lässt
 sich der Start fortsetzen.
 
+### Linux (Debian, Ubuntu, Raspberry Pi OS)
+
+Gedacht für den Mini-PC im Rack: NetWatch läuft als Dienst, startet beim
+Hochfahren automatisch mit und braucht keinen angemeldeten Benutzer.
+
+```
+sudo dpkg -i netwatch_1.14.0_amd64.deb
+```
+
+Danach ist NetWatch im Browser unter `http://<adresse>:5000` erreichbar —
+vom Tablet, vom Laptop, von überall im selben Netz.
+
+```
+systemctl status netwatch      # läuft es?
+journalctl -u netwatch -f      # Protokoll mitlesen
+sudo systemctl stop netwatch   # anhalten
+```
+
+Ihre Daten liegen unter `/var/lib/netwatch` und bleiben bei jedem Update
+erhalten. Erst `sudo apt purge netwatch` entfernt sie.
+
+Der Dienst läuft mit Systemrechten. Das ist nötig, weil NetWatch
+ICMP-Pakete verschickt und auf Port 68 nach fremden DHCP-Servern horcht —
+beides ist unterhalb der Rechte eines normalen Benutzers nicht möglich.
+
 ### Voraussetzungen
 
-- Windows 10 oder 11, 64 Bit
-- Rund 250 MB Platz auf der Festplatte
-- Keine Administratorrechte nötig
-- Keine Installation von Python erforderlich
+**Windows** — Windows 10 oder 11, 64 Bit. Rund 250 MB Platz. Keine
+Administratorrechte, kein Python nötig.
+
+**Linux** — 64-Bit-System (amd64) mit systemd. Rund 250 MB Platz.
+`ping` und `ip` werden mitinstalliert, falls sie fehlen. Kein Python nötig.
 
 ---
 
@@ -143,6 +175,9 @@ Veranstaltung soll nichts unangekündigt stoppen.
 
 **Ihre Daten bleiben erhalten.** Konfiguration, Event-Profile und
 Protokolle werden bei einer Aktualisierung nicht angefasst.
+
+Unter Linux spielt NetWatch das neue Paket selbst ein und startet den
+Dienst neu — es lädt genau das Paket, das zu Ihrer Architektur passt.
 
 ### Datenschutz
 
