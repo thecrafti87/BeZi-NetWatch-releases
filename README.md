@@ -11,7 +11,7 @@ Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
 Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
 während der Stream läuft.
 
-Aktuelle Fassung: **1.13.0**
+Aktuelle Fassung: **1.13.1**
 
 > Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
 
