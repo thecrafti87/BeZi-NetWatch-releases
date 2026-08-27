@@ -11,7 +11,7 @@ Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
 Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
 während der Stream läuft.
 
-Aktuelle Fassung: **1.14.1**
+Aktuelle Fassung: **1.15.0**
 
 > Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
 
@@ -107,14 +107,21 @@ Aktuelle Fassung: **1.14.1**
 
 ## Installation
 
-1. `NetWatch-Setup-1.14.1.exe` unten unter *Assets* herunterladen.
+1. `NetWatch-Setup-1.15.0.exe` unten unter *Assets* herunterladen.
 2. Ausführen. Die Installation läuft **ohne Administratorrechte** in den
    eigenen Benutzerordner und legt einen Startmenü-Eintrag an.
-3. NetWatch starten. Der Browser öffnet sich auf `http://localhost:5000`.
+3. NetWatch starten — die Oberfläche öffnet sich von selbst im Browser.
+   Ein Terminalfenster erscheint nicht.
 
 Im selben Netz erreichen andere Geräte die Ansichten über die IP-Adresse
 des Laptops, also etwa `http://192.168.1.50:5000` für die Kundenansicht und
 `http://192.168.1.50:5000/tech` für die Technik.
+
+**NetWatch läuft im Hintergrund weiter**, auch wenn Sie das Browserfenster
+schließen — während einer Veranstaltung soll die Überwachung nicht mit dem
+Tab enden. Beenden lässt es sich in der Technikeransicht unter *System* →
+*NetWatch beenden*. Ein erneuter Klick auf das Symbol öffnet einfach
+wieder die Oberfläche.
 
 > Die ZIP-Datei liegt weiterhin bei — für alle, die lieber ohne
 > Installation arbeiten oder von einer bestehenden Fassung aktualisieren.
