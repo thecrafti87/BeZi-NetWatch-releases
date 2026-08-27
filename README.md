@@ -11,7 +11,7 @@ Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
 Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
 während der Stream läuft.
 
-Aktuelle Fassung: **1.11.0**
+Aktuelle Fassung: **1.12.0**
 
 > Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
 
@@ -57,6 +57,8 @@ Aktuelle Fassung: **1.11.0**
 **Nachbereitung**
 - **Verlauf** zeigt für jedes Gerät als Zeitbalken, wann es erreichbar war
   und wann nicht — zoombar bis auf die Sekunde
+- **Bericht als PDF** mit Zeitbalken je Gerät: zeigt nicht nur *dass*,
+  sondern *wann* etwas ausgefallen ist
 - **Bericht zum Herunterladen** in Klartext, direkt an Auftraggeber
   weiterzugeben: Verfügbarkeit je Gerät, Unterbrechungen mit Dauer. Kurze
   Aussetzer werden getrennt ausgewiesen, damit ein gesundes Netz nicht wie
