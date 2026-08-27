@@ -11,7 +11,7 @@ Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
 Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
 während der Stream läuft.
 
-Aktuelle Fassung: **1.10.0**
+Aktuelle Fassung: **1.11.0**
 
 > Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
 
@@ -46,6 +46,13 @@ Aktuelle Fassung: **1.10.0**
 - **Internet-Geschwindigkeitstest** für Download, Upload und Ping
 - **Bandbreitenanzeige** je Netzwerkschnittstelle in Echtzeit
 - **Netzwerk-Suchlauf** findet Geräte im Netz und erkennt ihren Typ
+
+**Erfahrung aus früheren Veranstaltungen**
+- **Über Sitzungen hinweg:** NetWatch merkt sich, was für jedes Gerät in
+  jedem Netz normal ist, und zeigt, wie die heutigen Werte dazu stehen.
+  Aus „40 ms“ wird so „40 ms, wo sonst 8 stehen“
+- Getrennt nach Netz, weil dasselbe Gerät in Halle A am Kabel und in
+  Halle B im WLAN hängen kann
 
 **Nachbereitung**
 - **Verlauf** zeigt für jedes Gerät als Zeitbalken, wann es erreichbar war
