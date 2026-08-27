@@ -11,7 +11,7 @@ Gebaut für Wrestling-Shows, Messen und Firmenveranstaltungen, also für
 Situationen, in denen niemand Zeit hat, in einem Switch-Menü zu suchen,
 während der Stream läuft.
 
-Aktuelle Fassung: **1.16.1**
+Aktuelle Fassung: **1.17.0**
 
 > Dies ist die Download-Seite. Der Quellcode ist nicht öffentlich.
 
@@ -107,7 +107,7 @@ Aktuelle Fassung: **1.16.1**
 
 ## Installation
 
-1. `NetWatch-Setup-1.16.1.exe` unten unter *Assets* herunterladen.
+1. `NetWatch-Setup-1.17.0.exe` unten unter *Assets* herunterladen.
 2. Ausführen. Die Installation läuft **ohne Administratorrechte** in den
    eigenen Benutzerordner und legt einen Startmenü-Eintrag an.
 3. NetWatch starten — es öffnet sich ein eigenes Programmfenster. Kein
